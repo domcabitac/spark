@@ -1,19 +1,9 @@
-<?php
-/**
-* Page
-*
-* Template Name: Events
-*
-* @since   1.0.0
-* @package WP
-*/
-get_header(); ?>
-<section class="page-header <?php if (has_post_thumbnail()): echo'image'; endif;?>"  <?php if (has_post_thumbnail()):?> style="background-image:linear-gradient(to right, rgba(18, 60, 105, 0.70), rgba(0, 0, 0, 0.20)),url(<?php the_post_thumbnail_url();?>" <?php endif;?> >
-<?php if ( has_post_thumbnail() ) {?> <div class="overlay"></div><?php }?>
+<section class="events-preview" id="<?php the_sub_field( 'id' ); ?>">
     <div class="container">
         <div class="row">
-            <div class="col d-flex flex-column align-items-center justify-content-center">
-                <h1><?php the_title();?></h1>
+            <div class="col-12">
+                <?php the_sub_field( 'title' ); ?>
+                <?php the_sub_field( 'subtitle' ); ?>
             </div>
         </div>
     </div>
@@ -25,7 +15,7 @@ get_header(); ?>
                 $args = array(  
                     'post_type' => 'events',
                     'post_status' => 'publish',
-                    'posts_per_page' => -1, 
+                    'posts_per_page' => 3, 
                 );
 
                 $loop = new WP_Query( $args ); 
@@ -52,8 +42,4 @@ get_header(); ?>
         </div>
     </div>
 </section>
-
-
-
-
-<?php get_footer(); ?>
+<?php $link = get_sub_field( 'link' ); ?>
