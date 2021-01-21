@@ -1,0 +1,22 @@
+/*!
+Theme Name: Spark Entertainment
+Theme URI: https://github.com/ahmadawais/WPGulpTheme
+Description: A theme to demonstrate simplest implementation of WPGulp Boilerplate.
+Version: 1.0
+Author: Ferraz Creative
+Author URI: f
+License: MIT
+Text Domain: WPGT
+*/
+
+// Mixins & Variables.
+@import "partials/variables";
+// Normalize & Santize.
+@import "vendor/normalize";
+@import "vendor/sanitize";
+// Bootstrap
+@import "vendor/bootstrap-grid.min";
+// Structure.
+@import "partials/structure";
+// Base.
+@import "partials/base";
