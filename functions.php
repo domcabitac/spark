@@ -26,6 +26,8 @@ function enqueue_styles_and_scripts() {
 		
 		// Scripts
 		wp_enqueue_script( 'aos_js', get_template_directory_uri() . '/assets/vendor/aos/aos.js' );
+
+		wp_enqueue_script( 'smoothscroll-for-websites', get_template_directory_uri() . '/assets/vendor/smoothscroll-for-websites/SmoothScroll.js' );
 		
 		wp_enqueue_script( 'anime_js', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js' );
 
@@ -44,7 +46,6 @@ function enqueue_styles_and_scripts() {
 add_action( 'wp_enqueue_scripts', 'enqueue_styles_and_scripts' );
 
 //Removes automatic paragraph tags from content.
-remove_filter( 'the_content', 'wpautop' );
 remove_filter ('acf_the_content', 'wpautop');
 
 //Adds support for post thumbnails.
@@ -70,7 +71,7 @@ function register_menus() {
 		)
 	);
 }
-
+add_filter('wpcf7_autop_or_not', '__return_false');
 add_action( 'init', 'register_menus' );
 
 //Removes theme customizor options.
@@ -94,6 +95,8 @@ add_filter( 'login_headertext', 'mb_login_title' );
 function custom_login_styles() { 
 	?> 
 	<style type="text/css"> 
+	<div class="cursor-dot-outline"></div>
+<div class="cursor-dot"></div>
 	body.login div#login h1 a {
 	background-image: url("<?php echo get_template_directory_uri();?>/assets/img/logo.svg"); 
 	filter:brightness(0); 

@@ -5,7 +5,7 @@
         <div class="row justify-content-between">
         <div class="col-12 col-lg-6 col-xl-5 content">
         <h2><?php the_sub_field( 'title' ); ?></h2>
-		<p><?php the_sub_field( 'text' ); ?></p>
+		<p><?php the_sub_field( 'subtitle' ); ?></p>
 		<div class="d-flex align-items-center">
         <?php $display_picture = get_sub_field( 'display_picture' ); ?>
         <?php if ( $display_picture ) : ?>

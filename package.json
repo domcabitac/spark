@@ -44,5 +44,8 @@
 		"translate": "gulp translate",
 		"styles-rtl": "gulp stylesRTL",
 		"cache-clear": "gulp clearCache"
+	},
+	"dependencies": {
+		"smoothscroll-for-websites": "^1.4.10"
 	}
 }

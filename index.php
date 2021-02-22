@@ -15,6 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 <section id="blog-header" style="background-image:url();">
+<div class="cursor-dot-outline"></div>
+<div class="cursor-dot"></div>
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-12">

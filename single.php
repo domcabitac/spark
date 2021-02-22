@@ -15,6 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+<div class="cursor-dot-outline"></div>
+<div class="cursor-dot"></div>
 <section id="post-header">
     <div class="background"  style="background-image:url(<?php the_post_thumbnail_url();?>);"></div>
 	<div class="container">
