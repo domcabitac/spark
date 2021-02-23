@@ -28,9 +28,10 @@ body {
     .cursor-dot-outline {
         display: none;
     }
+    *,
     html,
     body {
-        cursor: default;
+        cursor: default !important;
     }
 }
 
@@ -161,7 +162,7 @@ body {
             background: black;
             position: absolute;
             left: 60%;
-            bottom: 20%;
+            bottom: 15%;
             z-index: 10;
             .hello {
                 position: absolute;
@@ -2209,6 +2210,8 @@ $white: #eeeeee;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    background-color: #151515;
+    margin: 3rem 0;
     h4 {
         font-style: normal;
         font-weight: normal;
@@ -2222,8 +2225,29 @@ $white: #eeeeee;
         }
     }
     a {
-        margin: 4rem auto auto;
+        margin: 3rem auto auto;
         width: 250px;
+    }
+    @media screen and (max-width: 767px) {
+        h4 {
+            margin: auto;
+            width: 100%;
+            max-width: 350px;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        h4 {
+            font-size: 1rem;
+            letter-spacing: .15em;
+        }
+        .btn {
+            padding: 7px 11px;
+            font-size: 1rem;
+            max-width: 200px;
+            svg {
+                margin-left: .2rem;
+            }
+        }
     }
 }
 

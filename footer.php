@@ -51,7 +51,7 @@ wp_footer(); ?>
 						<a href="/privacy-policy"><?php echo esc_html( $privacy_policy_link['title'] ); ?></a>
 					<?php endif; ?>
 					&#8198;| &#8198; Website created by 
-				<a class='fc'href="ferrazcreative.com">Ferraz Creative</a>
+				<a class='fc'href="https://www.ferrazcreative.com">Ferraz Creative</a>
 			</div>
 		</div>
 	</div>

@@ -443,7 +443,7 @@ html,body{position:relative;overflow-x:hidden;width:100%}
 .masthead-video-background *::-webkit-media-controls-start-playback-button{display:none !important;-webkit-appearance:none}
 .masthead-video-background .video-background{position:absolute;top:20%;left:32%;right:0;bottom:15%;overflow:hidden;border-radius:7px 0 0 7px;margin-right:-80px}
 .masthead-video-background .video-background #myVideo{position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
-.masthead-video-background .watchNow .wrapper{height:100%;background:black;position:absolute;left:60%;bottom:20%;z-index:10}
+.masthead-video-background .watchNow .wrapper{height:100%;background:black;position:absolute;left:60%;bottom:15%;z-index:10}
 .masthead-video-background .watchNow .wrapper .hello{position:absolute;color:white;text-transform:none !important;font:4vw/4vw times;top:calc(50% + 7.2vw);width:100%;height:100px;text-align:center;left:5.3vw}
 .masthead-video-background .watchNow .wrapper #textCircle{-webkit-animation:rotate 10s linear infinite;animation:rotate 10s linear infinite;width:10vw;height:10vw;position:absolute;top:calc(50% + 4.5vw);left:calc(50% + 1vw);overflow:hidden}
 .masthead-video-background .watchNow .wrapper #textCircle:after{display:block}
@@ -617,10 +617,10 @@ html,html *,body,body *{cursor:none}
 .cursor-dot,.cursor-dot-outline{pointer-events:none;position:fixed;border-radius:50%;opacity:0;z-index:102;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:opacity .3s ease-in-out,-webkit-transform .3s ease-in-out;transition:opacity .3s ease-in-out,-webkit-transform .3s ease-in-out;transition:opacity .3s ease-in-out,transform .3s ease-in-out;transition:opacity .3s ease-in-out,transform .3s ease-in-out,-webkit-transform .3s ease-in-out}
 .cursor-dot{width:8px;height:8px;background-color:white;z-index:101}
 .cursor-dot-outline{width:40px;height:40px;border:1px solid rgba(255,255,255,0.5);z-index:101;-webkit-transition:height 250ms ease,width 250ms ease,top 50ms ease,left 50ms ease;transition:height 250ms ease,width 250ms ease,top 50ms ease,left 50ms ease;will-change:left,top,height,width}
-.no-events{height:300px;border-radius:10px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.no-events{height:300px;border-radius:10px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;background-color:#151515;margin:3rem 0}
 .no-events h4{font-style:normal;font-weight:normal;font-size:1.1rem;letter-spacing:.305em;text-transform:uppercase;color:rgba(255,255,255,0.7)}
 .no-events h4 span{color:#f89c00}
-.no-events a{margin:4rem auto auto;width:250px}
+.no-events a{margin:3rem auto auto;width:250px}
 #regular_page h1{text-transform:uppercase;padding:2rem 0 1rem}
 #not-found-page{margin-top:10rem;background-image:url("data:image/svg+xml,%3Csvg width='1440' height='711' viewBox='0 0 1440 711' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-48 52.4531L1487 0V664.727L-48 711L-48 52.4531Z' fill='%23111112'/%3E%3C/svg%3E%0A");background-size:cover}
 #not-found-page .btn,#not-found-page #footer .newsletter-wrapper button,#footer .newsletter-wrapper #not-found-page button,#not-found-page .newsletter-cta button,.newsletter-cta #not-found-page button{margin-top:2rem;color:black}
@@ -962,7 +962,7 @@ html,html *,body,body *{cursor:none}
 }@media(min-width:1500px){.container{max-width:1450px}
 }@media only screen and (min-width:1500px){.image-text-overlay .bottom{padding-top:12rem}
 }@media screen and (min-width:1920px){.cursor-dot,.cursor-dot-outline{display:none}
-html,body{cursor:default}
+*,html,body{cursor:default !important}
 }@media screen and (max-width:1500px){h3{font-size:1.6rem}
 }@media screen and (max-width:1399px){.three-cards .card p{height:200px}
 }@media screen and (max-width:1200px){.image-text img{width:100%}
@@ -1081,6 +1081,7 @@ nav#desktop .nav-contact .line{display:none}
 .image-testimonial-overlay{padding-top:5rem}
 .image-testimonial-overlay .quote{padding-right:0;padding-bottom:1rem}
 .image-testimonial-overlay .GiT{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.no-events h4{margin:auto;width:100%;max-width:350px}
 }@media only screen and (max-width:767px){.masthead-video-background .masthead-text{margin-top:25%}
 .masthead-video-background .masthead-text .m-title h1{font-size:2.8rem;max-width:400px}
 .masthead-video-background .masthead-text .subtitle p{font-size:.9rem;padding-top:.5rem;max-width:400px}
@@ -1181,6 +1182,9 @@ h2{font-size:2rem}
 .newsletter-cta span.wpcf7-list-item{margin:0 1rem 0 0 !important}
 .newsletter-cta h2{font-size:3rem}
 .newsletter-cta .sub,.newsletter-cta .progress-bar-with-text .form-testimonial .author,.progress-bar-with-text .form-testimonial .newsletter-cta .author,.newsletter-cta .progress-bar-with-text .form-testimonial a,.progress-bar-with-text .form-testimonial .newsletter-cta a{font-size:.9rem}
+.no-events h4{font-size:1rem;letter-spacing:.15em}
+.no-events .btn,.no-events #footer .newsletter-wrapper button,#footer .newsletter-wrapper .no-events button,.no-events .newsletter-cta button,.newsletter-cta .no-events button{padding:7px 11px;font-size:1rem;max-width:200px}
+.no-events .btn svg,.no-events #footer .newsletter-wrapper button svg,#footer .newsletter-wrapper .no-events button svg,.no-events .newsletter-cta button svg,.newsletter-cta .no-events button svg{margin-left:.2rem}
 }@media only screen and (max-width:575px){.masthead-video-background{padding-left:10% !important;padding-right:10% !important}
 .masthead-video-background .video-background{border-radius:7px 0 0 7px;margin-top:0;bottom:35%;left:20%}
 .masthead-video-background .video-background #myVideo{top:30%;left:60%}
