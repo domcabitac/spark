@@ -522,7 +522,7 @@ body {
                 font-weight: bold;
                 font-size: 1rem;
                 text-transform: uppercase;
-                color: #FF9900;
+                color: $or;
             }
             display: flex;
             align-items: center;
@@ -812,7 +812,7 @@ body {
             align-items: center;
             text-align: center;
             justify-content: center;
-            background-color: #FF9900;
+            background-color: $or;
             margin-left: 2rem;
             .posts {
                 position: absolute;
@@ -945,7 +945,7 @@ body {
             font-size: 1rem;
             /* identical to box height, or 18px */
             text-transform: uppercase;
-            color: #FF9900;
+            color: $or;
         }
         .arrow-btn:hover {
             color: white;
@@ -1077,7 +1077,7 @@ body {
             }
             .arrow-btn {
                 padding-top: 3rem;
-                color: #FF9900;
+                color: $or;
             }
         }
     }
@@ -1204,7 +1204,7 @@ body {
             align-items: center;
             text-align: center;
             justify-content: center;
-            background-color: #FF9900;
+            background-color: $or;
             margin-left: 1rem;
             .posts {
                 position: absolute;
@@ -2031,7 +2031,7 @@ body {
     select:-webkit-autofill:hover,
     select:-webkit-autofill:focus,
     input:focus {
-        border-bottom: 1px solid #FF9900 !important;
+        border-bottom: 1px solid $or !important;
         fill: none;
         transition: background-color 5000s ease-in-out 0s;
         outline: none;
@@ -2050,7 +2050,7 @@ body {
         }
     }
     .wpcf7-textarea:focus {
-        border-bottom: 1px solid #FF9900;
+        border-bottom: 1px solid $or;
     }
     .wpcf7 form.invalid .wpcf7-response-output {
         border: none;
@@ -2079,7 +2079,7 @@ body {
     .wpcf7-submit {
         padding: 7px 25px;
         justify-content: center;
-        background-color: #FF9900;
+        background-color: $or;
         border-radius: 60px;
         font-weight: 700;
         color: black;
@@ -2271,6 +2271,152 @@ $white: #eeeeee;
         background-color: $or;
         svg path {
             fill: black;
+        }
+    }
+}
+
+.call-out {
+    padding-bottom: 2rem;
+    .container {
+        &.small {
+            border-style: solid;
+            border-width: 1px 1px 1px 10px;
+            border-color: $or;
+            border-radius: 10px;
+            background-color: #111112;
+        }
+    }
+    .bodyContent {
+        padding: 3rem;
+    }
+    .ring-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25px;
+        width: 25px;
+        padding: 0;
+        margin: 0;
+    }
+    .circle {
+        width: 15px;
+        height: 15px;
+        background-color: $or;
+        border-radius: 50%;
+        position: relative;
+    }
+    .ringring {
+        border: 3px solid $or;
+        -webkit-border-radius: 30px;
+        height: 25px;
+        width: 25px;
+        // position: absolute;
+        position: absolute;
+        -webkit-animation: pulsate 2s ease-out;
+        -webkit-animation-iteration-count: infinite;
+        opacity: 0;
+    }
+    @keyframes pulsate {
+        0% {
+            -webkit-transform: scale(0.1, 0.1);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1.2, 1.2);
+            opacity: 0;
+        }
+    }
+    .callOutLeft,
+    .callOutRight {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
+    h3 {
+        margin-left: 1rem;
+        font-family: Libre Franklin;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1rem;
+        /* identical to box height, or 86% */
+        letter-spacing: 0.305em;
+        text-transform: uppercase;
+    }
+    h4 {
+        font-family: Libre Franklin;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.875rem;
+        letter-spacing: 0.305em;
+        text-transform: uppercase;
+        margin-right: 1rem;
+    }
+    a {
+        font-family: Work Sans;
+        display: flex;
+        align-items: center;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: $or;
+        svg {
+            margin-left: 0.5rem;
+        }
+    }
+    a:hover {
+        color: white;
+        svg path {
+            fill: white;
+        }
+    }
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.05rem;
+        line-height: 1.5;
+        /* or 139% */
+        color: #B9B9B9;
+    }
+    @media screen and (max-width: 991px) {
+        .callOutLeft,
+        .callOutRight {
+            justify-content: center !important;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+        .bodyContent {
+            padding: 2rem;
+        }
+        .callOutRight {
+            flex-direction: column;
+        }
+        .callOutLeft,
+        .callOutRight {
+            justify-content: center !important;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            line-height: 1.2;
+        }
+        h4 {
+            margin-right: 0;
+        }
+        a {
+            margin-top: 0.3rem;
         }
     }
 }
