@@ -1,7 +1,7 @@
 <section class="post-type-offset-slider" id="<?php the_sub_field( 'id' ); ?>" >
 	<div class="container small header-desktop">
 		<div class="row align-items-center">
-			<div class="col-6 col-lg-6 d-flex event-title align-self-center align-items-center">
+			<div class="col-12 col-xl-6 col-lg-6 d-flex event-title align-self-center align-items-center">
 				<h2>
 					<?php the_sub_field( 'title' ); ?>
 				</h2>	
@@ -33,25 +33,8 @@
                 </div>
 
 		</div>
-	</div>
 	<?php $posts = get_sub_field( 'posts' ); ?>
 	<?php if ( get_sub_field('posts') ) : ?>
-	<div class="container header-mobile">
-		<div class="row align-items-center">
-			<div class="col-12 d-flex event-title align-self-center align-items-center">
-				<div class="circle">
-				<div class="posts">
-					<?php if (get_sub_field('posts')):?>  
-						<?php $event_count = count(get_sub_field('posts')); ?>
-						<?php echo $event_count ?>
-					<?php endif; ?>
-					</div>
-				</div>
-				<h2>
-					<?php the_sub_field( 'title' ); ?>
-				</h2>
-			</div>
-	</div>
 	<div class="row">
 	<div class="col-12 d-flex event-title slick-mobile">
 				<?php $i=0; foreach ( $posts as $post ) : ?>

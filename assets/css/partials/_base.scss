@@ -718,7 +718,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     .header-mobile {
-        display: none;
+        // display: none;
     }
     .slick-mobile {
         display: none;
@@ -956,14 +956,14 @@ body {
     }
     @media screen and (max-width: 991px) {}
     @media screen and (max-width: 767px) {
-        .header-desktop {
+        // .header-desktop {
+        //     display: none;
+        // }
+        .slider-arrow {
             display: none;
         }
         .slick-desktop {
             display: none !important;
-        }
-        .header-mobile {
-            display: block !important;
         }
         .slick-mobile {
             visibility: visible;
@@ -979,11 +979,12 @@ body {
             margin: -3rem 0 0 3rem;
         }
         .event-title {
-            flex-direction: column;
-            padding-bottom: 2rem;
+            flex-direction: row;
+            padding-bottom: 1rem;
+            justify-content: center;
             .circle {
-                margin-left: 0;
-                margin-bottom: 1.5rem;
+                margin-left: 1rem;
+                margin-bottom: 0;
             }
         }
         .topCard {
@@ -1026,7 +1027,7 @@ body {
                 }
             }
             h2 {
-                padding-bottom: 2rem;
+                font-size: 0.9rem;
             }
         }
         .slider-arrow.right {
