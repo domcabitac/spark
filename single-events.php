@@ -89,13 +89,21 @@ Link Copied</p>
                     </div>
                 </div>
                 <a class='btn solid'href="<?php the_field( 'ticket_link' ); ?>">Get my ticket
-                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.93944 21.9405L18.6947 6.18521L18.8806 15.9814L22.0715 16.0422L21.7792 0.778222L6.51518 0.485891L6.57606 3.67686L16.3722 3.86268L0.616912 19.618L2.93944 21.9405Z" fill="#FF9900"/>
-</svg>
-
-            </a>
-                
-
+                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.93944 21.9405L18.6947 6.18521L18.8806 15.9814L22.0715 16.0422L21.7792 0.778222L6.51518 0.485891L6.57606 3.67686L16.3722 3.86268L0.616912 19.618L2.93944 21.9405Z" fill="#FF9900"/>
+                    </svg>
+                </a>
+                <?php 
+                    $datetime = new DateTime(get_field( 'date' ));
+                    // $startDate = format(DateTime::ATOM);
+                    echo $datetime->format(DateTime::ATOM);
+                    $endDate = urlencode(get_field( 'end_date' ));
+                    $location = urlencode(get_field( 'location' ));
+                    $desc = urlencode(get_field( 'description' ));
+                ?>
+                <a href="http://www.google.com/calendar/render?action=TEMPLATE&text=[<?php the_title(); ?>]&dates=[<?php echo $datetime->format(DateTime::ATOM); ?>]/[<?php echo $endDate; ?>]&details=[<?php echo $desc ?>]&location=[<?php echo $location; ?>]&trp=false&sprop=&sprop=name:"target="_blank" rel="nofollow">
+                    Add to my calendar
+                </a>
             </div>
             <div class="col-xl-6 col-lg-6 col-12">
                 <h6>

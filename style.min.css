@@ -448,6 +448,7 @@ html,body{position:relative;overflow-x:hidden;width:100%}
 .masthead-video-background .watchNow .wrapper #textCircle{-webkit-animation:rotate 10s linear infinite;animation:rotate 10s linear infinite;width:10vw;height:10vw;position:absolute;top:calc(50% + 4.5vw);left:calc(50% + 1vw);overflow:hidden}
 .masthead-video-background .watchNow .wrapper #textCircle:after{display:block}
 .masthead-video-background .masthead-text{z-index:5;width:100%;margin-top:25%}
+.masthead-video-background .masthead-text h1{margin-bottom:0}
 .masthead-video-background .masthead-text .m-title{font-style:italic;text-transform:uppercase;font-weight:700;font-size:5rem;line-height:.9;max-width:500px;margin:0 !important}
 .masthead-video-background .masthead-text .subtitle{font-size:1.25rem;color:#FFF;line-height:1.2;font-weight:400;padding-top:3rem;max-width:650px;padding-left:5rem;font-style:normal !important}
 .masthead-video-background .masthead-text::before{content:"";display:block;position:absolute;z-index:1;left:0;top:415px;bottom:-30px;border:.1px solid rgba(255,255,255,0.3);border-width:0 0 0 .1px}
@@ -582,6 +583,8 @@ html,body{position:relative;overflow-x:hidden;width:100%}
 .newsletter-cta :-ms-input-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1.1rem;color:#b9b9b9;mix-blend-mode:normal}
 .newsletter-cta ::-ms-input-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1.1rem;color:#b9b9b9;mix-blend-mode:normal}
 .newsletter-cta ::placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1.1rem;color:#b9b9b9;mix-blend-mode:normal}
+.newsletter-cta .fsRowBody input[type=checkbox]:before,.newsletter-cta .fsRowBody input[type=checkbox]:checked:before,.newsletter-cta .fsRowBody input[type=radio]:before,.newsletter-cta .fsRowBody input[type=radio]:checked:before{width:14px;height:14px;margin-right:7px;border:2px solid #cfd4d8;background-color:transparent !important;margin-bottom:10px}
+.newsletter-cta .fsRowBody input[type=radio]:checked:before{border:none !important;background-color:white !important}
 .newsletter-cta button{border-radius:0;height:60px}
 .newsletter-cta button svg g{fill:#FFF}
 .newsletter-cta h2{font-family:Work Sans;font-style:italic;font-weight:bold;font-size:4rem;text-transform:uppercase;color:#fff}
@@ -595,13 +598,9 @@ html,body{position:relative;overflow-x:hidden;width:100%}
 .newsletter-cta input[type=tel],.newsletter-cta input[type=number],.newsletter-cta input[type=text],.newsletter-cta input[type=textarea],.newsletter-cta input[type=email]{border-bottom:1px solid #b9b9b9;-webkit-box-sizing:border-box;box-sizing:border-box;padding:1rem 0;margin:1rem 0;width:100% !important;border-radius:0}
 .newsletter-cta input[type=tel].wpcf7-not-valid,.newsletter-cta input[type=number].wpcf7-not-valid,.newsletter-cta input[type=text].wpcf7-not-valid,.newsletter-cta input[type=textarea].wpcf7-not-valid,.newsletter-cta input[type=email].wpcf7-not-valid{border-bottom:1px solid red}
 .newsletter-cta .wpcf7-not-valid-tip{display:none}
-.newsletter-cta input[type=radio]{display:none}
 .newsletter-cta .wpcf7-form-control-wrap{width:100%}
 .newsletter-cta .type-of-contact{width:80% !important}
 .newsletter-cta div.wpcf7 .ajax-loader{display:none}
-.newsletter-cta input[type="radio"]+span{padding:10px 25px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:transparent;border-radius:60px;border:1px solid white;font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1rem;color:white}
-.newsletter-cta input[type="radio"]+span:hover{background-color:white;color:black}
-.newsletter-cta input[type="radio"]:checked+span{padding:10px 25px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:white;border-radius:60px;border:0;font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1rem;color:#070505}
 .newsletter-cta .submitRow{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;padding-top:4rem;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .newsletter-cta span .wpcf7-form-control-wrap{margin:2rem !important}
 .newsletter-cta .inquireLabel{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:.9rem;letter-spacing:.305em;text-transform:uppercase}
@@ -609,9 +608,15 @@ html,body{position:relative;overflow-x:hidden;width:100%}
 .newsletter-cta .wpcf7-textarea:focus{border-bottom:1px solid #f90}
 .newsletter-cta .wpcf7 form.invalid .wpcf7-response-output{border:0;font-family:Work Sans;font-style:italic;font-weight:bold;text-transform:uppercase;color:red;margin:0 !important}
 .newsletter-cta .wpcf7 form.sent .wpcf7-response-output{border:0;font-family:Work Sans;font-style:italic;font-weight:bold;text-transform:uppercase;color:white;margin:0 !important}
-.newsletter-cta .wpcf7-submit{padding:7px 25px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:#f90;border-radius:60px;font-weight:700;color:black;height:45px;text-transform:uppercase;font-family:Work Sans;font-style:italic;font-weight:bold;font-size:1.25rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.newsletter-cta .wpcf7-submit svg{height:30px;width:32px}
-.newsletter-cta .wpcf7-submit:hover{background-color:white}
+.newsletter-cta .fsSubmitButton{margin:0 !important}
+.newsletter-cta .wpcf7-submit,.newsletter-cta .fsSubmitButton{padding:7px 25px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:#f90 !important;border-radius:60px !important;font-weight:700 !important;color:black !important;height:45px;text-transform:uppercase !important;font-family:Work Sans !important;font-style:italic;font-size:1.25rem !important;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:250ms all ease;transition:250ms all ease}
+.newsletter-cta .wpcf7-submit svg,.newsletter-cta .fsSubmitButton svg{height:30px;width:32px}
+.newsletter-cta .wpcf7-submit:hover,.newsletter-cta .fsSubmitButton:hover{background-color:white !important;-webkit-transition:250ms all ease;transition:250ms all ease}
+.newsletter-cta .fsBody{padding:0 !important;background-color:#111112 !important}
+.newsletter-cta .sfEmbed,.newsletter-cta .fsSingleColumn,.newsletter-cta .fsField{background-color:#111112 !important}
+.newsletter-cta .fsBody .fsForm{margin:0 !important;padding:0 !important}
+.newsletter-cta .fsRowBody input[type=email],.newsletter-cta .fsRowBody input[type=number],.newsletter-cta .fsRowBody input[type=tel],.newsletter-cta #field109283372,.newsletter-cta .fsRowBody input[type=text],.newsletter-cta .fsRowBody input[type=field],.newsletter-cta .fsRowBody input[type=email]:focus,.newsletter-cta .fsRowBody input[type=number]:focus,.newsletter-cta .fsRowBody input[type=tel]:focus,.newsletter-cta .fsRowBody input[type=text]:focus,.newsletter-cta .fsRowBody input[type=field]:focus,.newsletter-cta .fsRowBody input[type=email]:-webkit-autofill,.newsletter-cta .fsRowBody input[type=number]:-webkit-autofill,.newsletter-cta .fsRowBody input[type=tel]:-webkit-autofill,.newsletter-cta .fsRowBody input[type=field]:-webkit-autofill,.newsletter-cta .fsRowBody input[type=text]:-webkit-autofill{border:0;border-bottom:1px solid #b9b9b9 !important;-webkit-box-sizing:border-box !important;box-sizing:border-box !important;padding:1rem 0 !important;margin:1rem 0 !important;width:100% !important;border-radius:0 !important;background-color:#111112 !important;-webkit-box-shadow:none;box-shadow:none}
+.newsletter-cta .fsSectionHeader{display:none !important}
 html,html *,body,body *{cursor:none}
 .cursor-dot,.cursor-dot-outline{pointer-events:none;position:fixed;border-radius:50%;opacity:0;z-index:102;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:opacity .3s ease-in-out,-webkit-transform .3s ease-in-out;transition:opacity .3s ease-in-out,-webkit-transform .3s ease-in-out;transition:opacity .3s ease-in-out,transform .3s ease-in-out;transition:opacity .3s ease-in-out,transform .3s ease-in-out,-webkit-transform .3s ease-in-out}
 .cursor-dot{width:8px;height:8px;background-color:white;z-index:101}
@@ -625,7 +630,8 @@ html,html *,body,body *{cursor:none}
 #not-found-page .btn,#not-found-page #footer .newsletter-wrapper button,#footer .newsletter-wrapper #not-found-page button,#not-found-page .newsletter-cta button,.newsletter-cta #not-found-page button{margin-top:2rem;color:black}
 #not-found-page .btn:hover,#not-found-page #footer .newsletter-wrapper button:hover,#footer .newsletter-wrapper #not-found-page button:hover,#not-found-page .newsletter-cta button:hover,.newsletter-cta #not-found-page button:hover{background-color:#f90}
 #not-found-page .btn:hover svg path,#not-found-page #footer .newsletter-wrapper button:hover svg path,#footer .newsletter-wrapper #not-found-page button:hover svg path,#not-found-page .newsletter-cta button:hover svg path,.newsletter-cta #not-found-page button:hover svg path{fill:black}
-.call-out{padding-bottom:2rem}
+.call-out{padding-bottom:0;padding-top:5.5rem}
+.call-out .callOutMobile{display:none}
 .call-out .container.small{border-style:solid;border-width:1px 1px 1px 10px;border-color:#f90;border-radius:10px;background-color:#111112}
 .call-out .bodyContent{padding:3rem}
 .call-out .ring-container{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:25px;width:25px;padding:0;margin:0}
@@ -1041,7 +1047,9 @@ nav#desktop .nav-contact .line{display:none}
 .newsletter-cta p{padding-top:1rem;padding-bottom:0}
 .newsletter-cta .inquireText{padding-bottom:2rem}
 .cursor-dot,.cursor-dot-outline{visibility:hidden;display:none}
-.call-out .callOutLeft,.call-out .callOutRight{-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;margin-bottom:1rem}
+.call-out .callOutMobile{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:2rem}
+.call-out .callOutRight{display:none}
+.call-out .callOutLeft{-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;margin-bottom:2rem}
 .call-out p{font-size:.95rem;line-height:1.6}
 }@media only screen and (max-width:991px){.masthead-video-background .video-background{left:30%;bottom:20%}
 .masthead-video-background .masthead-text{margin-top:20%}
@@ -1096,6 +1104,9 @@ nav#desktop .nav-contact .line{display:none}
 .image-testimonial-overlay .quote{padding-right:0;padding-bottom:1rem}
 .image-testimonial-overlay .GiT{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .no-events h4{margin:auto;width:100%;max-width:350px}
+.call-out .callOutMobile{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:start}
+.call-out .callOutMobile h4{font-size:.8rem}
+.call-out .callOutMobile a{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:start;font-size:1.3rem}
 }@media only screen and (max-width:767px){.masthead-video-background .masthead-text{margin-top:25%}
 .masthead-video-background .masthead-text .m-title h1{font-size:2.8rem;max-width:400px}
 .masthead-video-background .masthead-text .subtitle p{font-size:.9rem;padding-top:.5rem;max-width:400px}
@@ -1200,10 +1211,9 @@ h2{font-size:2rem}
 .no-events .btn,.no-events #footer .newsletter-wrapper button,#footer .newsletter-wrapper .no-events button,.no-events .newsletter-cta button,.newsletter-cta .no-events button{padding:7px 11px;font-size:1rem;max-width:200px}
 .no-events .btn svg,.no-events #footer .newsletter-wrapper button svg,#footer .newsletter-wrapper .no-events button svg,.no-events .newsletter-cta button svg,.newsletter-cta .no-events button svg{margin-left:.2rem}
 .call-out{padding-left:10% !important;padding-right:10% !important}
-.call-out .bodyContent{padding:2rem}
-.call-out .callOutRight{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
-.call-out .callOutLeft,.call-out .callOutRight{-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;margin-bottom:1rem}
-.call-out h3{line-height:1.2}
+.call-out .bodyContent{padding:3rem 2rem}
+.call-out .callOutLeft{-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important}
+.call-out h3{line-height:1.2;font-size:.8rem;margin-left:.6rem}
 .call-out h4{margin-right:0}
 .call-out a{margin-top:.3rem}
 }@media only screen and (max-width:575px){.masthead-video-background{padding-left:10% !important;padding-right:10% !important}

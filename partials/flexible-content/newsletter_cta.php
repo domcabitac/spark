@@ -12,7 +12,14 @@
 		</div>
 		<div class="row justify-content-start">
 			<div class="col-12 text-left sub-title-text-btn">
-				<div class="form"><?php echo do_shortcode(get_sub_field( 'form_shortcode' )); ?></div>
+				<div class="form">
+				<?php if(get_sub_field('form_shortcode')){
+						echo do_shortcode(get_sub_field( 'form_shortcode' ));
+					} elseif(get_sub_field('form_embed_code')){
+						the_sub_field('form_embed_code');
+					}
+				?>
+				</div>
 				<small><?php the_sub_field( 'under_form' ); ?></small>
 			</div>
 		</div>

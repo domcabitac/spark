@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			<div class="col-1 d-flex inquire justify-content-end">
 			<a class="bigpadding" href='/#contact'>
- 				<button class="wt-btn_sign"><span class="wt-btn_sign-bound"><span data-width="#FF9900" data-text="Inquire">Inquire</span></span></button>
+ 				<button class="wt-btn_sign"><span class="wt-btn_sign-bound"><span data-width="#FF9900" data-text="<?php the_field( 'menu_button_text', 'option' ); ?>"><?php the_field( 'menu_button_text', 'option' ); ?></span></span></button>
  			 </a>
 			</div>
 		</div>
