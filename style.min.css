@@ -578,11 +578,11 @@ html,body{position:relative;overflow-x:hidden;width:100%}
 .single_event .btn:hover svg path,.single_event #footer .newsletter-wrapper button:hover svg path,#footer .newsletter-wrapper .single_event button:hover svg path,.single_event .newsletter-cta button:hover svg path,.newsletter-cta .single_event button:hover svg path{fill:black}
 .single_event .show{visibility:visible;opacity:1;-webkit-transform:scale(1);transform:scale(1);-webkit-animation:cssAnimation 0s 3s forwards;animation:cssAnimation 0s 3s forwards;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 .newsletter-cta{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;background-image:url("data:image/svg+xml,%3Csvg width='1440' height='1050' viewBox='0 0 1440 1050' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-49 77.4495L1486 0V981.5L-49 1049.82L-49 77.4495Z' fill='%23111112'/%3E%3C/svg%3E%0A");background-size:cover;padding-top:13rem !important}
-.newsletter-cta ::-webkit-input-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1.1rem;color:#b9b9b9;mix-blend-mode:normal}
-.newsletter-cta ::-moz-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1.1rem;color:#b9b9b9;mix-blend-mode:normal}
-.newsletter-cta :-ms-input-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1.1rem;color:#b9b9b9;mix-blend-mode:normal}
-.newsletter-cta ::-ms-input-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1.1rem;color:#b9b9b9;mix-blend-mode:normal}
-.newsletter-cta ::placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1.1rem;color:#b9b9b9;mix-blend-mode:normal}
+.newsletter-cta ::-webkit-input-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1rem;color:#b9b9b9;mix-blend-mode:normal}
+.newsletter-cta ::-moz-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1rem;color:#b9b9b9;mix-blend-mode:normal}
+.newsletter-cta :-ms-input-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1rem;color:#b9b9b9;mix-blend-mode:normal}
+.newsletter-cta ::-ms-input-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1rem;color:#b9b9b9;mix-blend-mode:normal}
+.newsletter-cta ::placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1rem;color:#b9b9b9;mix-blend-mode:normal}
 .newsletter-cta .fsRowBody input[type=checkbox]:before,.newsletter-cta .fsRowBody input[type=checkbox]:checked:before,.newsletter-cta .fsRowBody input[type=radio]:before,.newsletter-cta .fsRowBody input[type=radio]:checked:before{width:14px;height:14px;margin-right:7px;border:2px solid #cfd4d8;background-color:transparent !important;margin-bottom:10px}
 .newsletter-cta .fsRowBody input[type=radio]:checked:before{border:none !important;background-color:white !important}
 .newsletter-cta button{border-radius:0;height:60px}
@@ -614,9 +614,15 @@ html,body{position:relative;overflow-x:hidden;width:100%}
 .newsletter-cta .wpcf7-submit:hover,.newsletter-cta .fsSubmitButton:hover{background-color:white !important;-webkit-transition:250ms all ease;transition:250ms all ease}
 .newsletter-cta .fsBody{padding:0 !important;background-color:#111112 !important}
 .newsletter-cta .sfEmbed,.newsletter-cta .fsSingleColumn,.newsletter-cta .fsField{background-color:#111112 !important}
-.newsletter-cta .fsBody .fsForm{margin:0 !important;padding:0 !important}
+.newsletter-cta .fsBody .fsForm{margin:0 !important;padding:0 !important;background-color:transparent}
 .newsletter-cta .fsRowBody input[type=email],.newsletter-cta .fsRowBody input[type=number],.newsletter-cta .fsRowBody input[type=tel],.newsletter-cta #field109283372,.newsletter-cta .fsRowBody input[type=text],.newsletter-cta .fsRowBody input[type=field],.newsletter-cta .fsRowBody input[type=email]:focus,.newsletter-cta .fsRowBody input[type=number]:focus,.newsletter-cta .fsRowBody input[type=tel]:focus,.newsletter-cta .fsRowBody input[type=text]:focus,.newsletter-cta .fsRowBody input[type=field]:focus,.newsletter-cta .fsRowBody input[type=email]:-webkit-autofill,.newsletter-cta .fsRowBody input[type=number]:-webkit-autofill,.newsletter-cta .fsRowBody input[type=tel]:-webkit-autofill,.newsletter-cta .fsRowBody input[type=field]:-webkit-autofill,.newsletter-cta .fsRowBody input[type=text]:-webkit-autofill{border:0;border-bottom:1px solid #b9b9b9 !important;-webkit-box-sizing:border-box !important;box-sizing:border-box !important;padding:1rem 0 !important;margin:1rem 0 !important;width:100% !important;border-radius:0 !important;background-color:#111112 !important;-webkit-box-shadow:none;box-shadow:none}
 .newsletter-cta .fsSectionHeader{display:none !important}
+.newsletter-cta div.fsError{background-color:rgba(206,95,109,0.15);padding:1rem;border:none !important}
+.newsletter-cta .fsValidationError{background-color:transparent;-webkit-box-shadow:none;box-shadow:none}
+.newsletter-cta label.fsOptionLabel{background-color:transparent !important;border:none !important}
+.newsletter-cta .fsCurrency.fsCurrencyPrefix{position:absolute;left:-1.5rem;bottom:1.35rem}
+.newsletter-cta .fsBody .fsRowBody{position:relative}
+.newsletter-cta .fsValidationError .fsSignature,.newsletter-cta .fsValidationError input[type=email],.newsletter-cta .fsValidationError input[type=number],.newsletter-cta .fsValidationError input[type=tel],.newsletter-cta .fsValidationError input[type=text],.newsletter-cta .fsValidationError select,.newsletter-cta .fsValidationError textarea{border:none !important;border-color:transparent;border-bottom:1px solid #ce5f6d !important}
 html,html *,body,body *{cursor:none}
 .cursor-dot,.cursor-dot-outline{pointer-events:none;position:fixed;border-radius:50%;opacity:0;z-index:102;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:opacity .3s ease-in-out,-webkit-transform .3s ease-in-out;transition:opacity .3s ease-in-out,-webkit-transform .3s ease-in-out;transition:opacity .3s ease-in-out,transform .3s ease-in-out;transition:opacity .3s ease-in-out,transform .3s ease-in-out,-webkit-transform .3s ease-in-out}
 .cursor-dot{width:8px;height:8px;background-color:white;z-index:101}
@@ -1044,6 +1050,7 @@ nav#desktop .nav-contact .line{display:none}
 .image-text .text_area .text-right p{margin:0 0 0 2.5rem !important;text-align:left;font-size:.9rem}
 .single_event .btn,.single_event #footer .newsletter-wrapper button,#footer .newsletter-wrapper .single_event button,.single_event .newsletter-cta button,.newsletter-cta .single_event button{margin-top:1rem;margin-bottom:3rem}
 .single_event p{max-width:100%}
+.newsletter-cta .fsCurrency.fsCurrencyPrefix{left:-1rem}
 .newsletter-cta p{padding-top:1rem;padding-bottom:0}
 .newsletter-cta .inquireText{padding-bottom:2rem}
 .cursor-dot,.cursor-dot-outline{visibility:hidden;display:none}
@@ -1103,6 +1110,7 @@ nav#desktop .nav-contact .line{display:none}
 .image-testimonial-overlay{padding-top:5rem}
 .image-testimonial-overlay .quote{padding-right:0;padding-bottom:1rem}
 .image-testimonial-overlay .GiT{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.newsletter-cta .fsCurrency.fsCurrencyPrefix{left:-0.75rem}
 .no-events h4{margin:auto;width:100%;max-width:350px}
 .call-out .callOutMobile{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:start}
 .call-out .callOutMobile h4{font-size:.8rem}
@@ -1235,6 +1243,7 @@ h2{font-size:2rem}
 .features .feature-cards .content{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;margin-bottom:-0.5rem;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;max-width:300px;width:295px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding-left:1.3rem;bottom:0;right:0}
 .features .feature-cards .content h3{font-size:2.3rem}
 .features .feature-cards .content .btn svg,.features .feature-cards .content #footer .newsletter-wrapper button svg,#footer .newsletter-wrapper .features .feature-cards .content button svg,.features .feature-cards .content .newsletter-cta button svg,.newsletter-cta .features .feature-cards .content button svg{height:28px;width:28px;margin-left:.2rem}
+}@media screen and (max-width:480px){.newsletter-cta .fsCurrency.fsCurrencyPrefix{left:-1rem}
 }@media print{.d-print-none{display:none !important}
 .d-print-inline{display:inline !important}
 .d-print-inline-block{display:inline-block !important}

@@ -1858,7 +1858,7 @@
             font-family: Libre Franklin;
             font-style: normal;
             font-weight: normal;
-            font-size: 1.1rem;
+            font-size: 1rem;
             /* identical to box height, or 86% */
             color: #B9B9B9;
             mix-blend-mode: normal;
@@ -1878,6 +1878,7 @@
             border: none !important;
             background-color: white !important;
         }
+
         // input[type=email] {
         //     padding: 1rem;
         //     height: 60px;
@@ -2140,6 +2141,7 @@
         .fsBody .fsForm {
             margin: 0 !important;
             padding: 0 !important;
+            background-color:transparent;
         }
         .fsRowBody input[type=email],
         .fsRowBody input[type=number],
@@ -2170,6 +2172,41 @@
         }
         .fsSectionHeader {
             display: none !important;
+        }
+        div.fsError{
+            background-color:rgba(206, 95, 109,0.15);
+            padding:1rem;
+            border:none !important;
+        }
+        .fsValidationError{
+            background-color:transparent;
+            box-shadow:none;
+        }
+        label.fsOptionLabel{
+            background-color:transparent !important;
+            border:none !important;
+        }
+        .fsCurrency.fsCurrencyPrefix{
+            position: absolute;
+            left: -1.5rem;
+            bottom: 1.35rem;
+            @media screen and (max-width:991px){
+                left:-1rem;
+            }
+            @media screen and (max-width:767px){
+                left:-0.75rem;
+            }
+            @media screen and (max-width:480px){
+                left:-1rem;
+            }
+        }
+        .fsBody .fsRowBody{
+            position:relative;
+        }
+        .fsValidationError .fsSignature, .fsValidationError input[type=email], .fsValidationError input[type=number], .fsValidationError input[type=tel], .fsValidationError input[type=text], .fsValidationError select, .fsValidationError textarea{
+            border:none !important;
+            border-color:transparent;
+            border-bottom:1px solid #ce5f6d !important;
         }
         @media screen and (max-width: 991px) {
             p {
