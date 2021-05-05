@@ -2171,6 +2171,9 @@
             box-shadow: none;
             font-size:1rem;
         }
+        .fsBody .fsLabel, .fsBody label{
+            color:#FFF !important;
+        }
         .fsSectionHeader {
             display: none !important;
         }

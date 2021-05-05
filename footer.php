@@ -23,7 +23,7 @@ wp_footer(); ?>
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/footerLogo.svg" /></a>
 			</a>
 			</div>
-			<div class="col-6 col-xl-1 col-lg-1 col-md-3 d-flex left-menu">
+			<div class="col-6 col-xl-1 col-lg-1 col-md-3 offset-xl-3 d-flex left-menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'footer-left-menu' ) ); ?>
 			</div>
 			<div class="col-6 col-xl-1 col-lg-1 col-md-3 d-flex right-menu">
