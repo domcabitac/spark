@@ -30,15 +30,15 @@ wp_footer(); ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'footer-right-menu' ) ); ?>
 			</div>
 			<div class="col-12 col-xl-3 col-lg-3 col-md-6 offset-xl-4 offset-lg-4 form d-flex newsLetter justify-content-end">
-				<?php if ( have_rows( 'footer', 'option' ) ) : ?>
+				<!-- <?php if ( have_rows( 'footer', 'option' ) ) : ?>
 					<?php while ( have_rows( 'footer', 'option' ) ) : the_row(); ?>
 					<div class="nlTitle">
-							<?php the_sub_field( 'newsletter_title' ); ?>
+							<?php //the_sub_field( 'newsletter_title' ); ?>
 						</div>
-						<?php echo do_shortcode(get_sub_field( 'newsletter_form_shortcode' )); ?>
+						<?php //echo do_shortcode(get_sub_field( 'newsletter_form_shortcode' )); ?>
 				<div class="nlSub">
-					<?php the_sub_field( 'newsletter_subtitle' ); ?>
-				</div>
+					<?php //the_sub_field( 'newsletter_subtitle' ); ?>
+				</div> -->
         	</div>
 		</div>
 		<div class="row justify-content-between endFooter">

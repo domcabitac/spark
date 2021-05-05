@@ -1860,7 +1860,7 @@
             font-weight: normal;
             font-size: 1rem;
             /* identical to box height, or 86% */
-            color: #B9B9B9;
+            color: rgba(#B9B9B9,0.5);
             mix-blend-mode: normal;
         }
         .fsRowBody input[type=checkbox]:before,
@@ -2164,11 +2164,12 @@
             -webkit-box-sizing: border-box !important;
             box-sizing: border-box !important;
             padding: 1rem 0 !important;
-            margin: 1rem 0 !important;
+            margin: 0 0 1rem !important;
             width: 100% !important;
             border-radius: 0 !important;
             background-color: rgba(17, 17, 18, 1) !important;
             box-shadow: none;
+            font-size:1rem;
         }
         .fsSectionHeader {
             display: none !important;
