@@ -213,7 +213,7 @@ nav#desktop .nav-contact{-ms-flex-wrap:wrap;flex-wrap:wrap;display:inline-block;
 nav#desktop .line{content:"";position:relative;background-color:#fff;width:2px;bottom:3px;opacity:.65;right:18px;z-index:4;border-radius:42px}
 nav#desktop .inquire{padding-left:0 !important;padding-right:0 !important}
 .bigpadding{padding-right:0 !important}
-.wt-btn_sign{font-size:1.1rem;font-family:Work Sans;font-style:italic;font-weight:bold;letter-spacing:-.21px;white-space:nowrap;-webkit-transition:color .3s;transition:color .3s;background:transparent;border:1px solid #f90;padding:5px 10px;border-radius:22px}
+.wt-btn_sign{font-size:1rem;font-family:Work Sans;font-style:italic;font-weight:bold;letter-spacing:-.21px;white-space:nowrap;-webkit-transition:color .3s;transition:color .3s;background:transparent;border:1px solid #f90;padding:5px 5px;border-radius:22px}
 .wt-btn_sign:hover{color:white;background:#f90;-webkit-transition:all ease .2s;transition:all ease .2s}
 .wt-btn_sign-bound{display:block;overflow:hidden;border-radius:22px}
 .wt-btn_sign-bound span{position:relative;display:inline-block;padding:0 22px;color:#f90;text-transform:uppercase;font-style:italic;font-weight:bold;font-style:1.1rem;font-family:Work Sans !important;-webkit-animation:wt-btn_sign-marquee 2s linear infinite;animation:wt-btn_sign-marquee 2s linear infinite}
@@ -563,8 +563,11 @@ html,body{position:relative;overflow-x:hidden;width:100%}
 .single_event .locationText{text-decoration:underline}
 .single_event .locationText:hover{color:#f90}
 .single_event .locDets{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1.1rem}
-.single_event .backButton{font-family:Libre Franklin;font-style:italic;font-weight:bold;font-size:1rem;text-transform:uppercase;color:#b9b9b9}
-.single_event .backButton:hover{color:#f90}
+.single_event .backButton{font-family:Libre Franklin;font-style:italic;font-weight:bold;font-size:1rem;text-transform:uppercase;color:#b9b9b9;list-style-type:none}
+.single_event .backButton ul{background:white;height:0;left:0;opacity:0;position:absolute;-webkit-transition:all .5s ease;transition:all .5s ease;top:35px;width:70%;list-style-type:none}
+.single_event .backButton li:hover ul{height:70px;opacity:1;-webkit-transform:translateY(0);transform:translateY(0);border-radius:7px}
+.single_event .backButton ul a{color:#000;display:block;padding:5px 20px}
+.single_event .backButton ul a:hover{color:#f90}
 .single_event .share{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:.8rem;text-transform:uppercase;color:#b9b9b9}
 .single_event .popup-container{visibility:hidden;opacity:0;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;-webkit-transform:scale(1.3);transform:scale(1.3);position:fixed;z-index:101;left:0;top:0;width:100%;height:100%;background-color:rgba(21,17,17,0.61);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .single_event .popup-content{background-color:#202020;padding:7px 30px;border:1px solid #202020;border-radius:5px;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
@@ -572,11 +575,12 @@ html,body{position:relative;overflow-x:hidden;width:100%}
 .single_event .popup-content p svg{height:35px;width:35px;margin-bottom:5px;fill:white}
 .single_event .popup-content span{display:none}
 .single_event .popup-content span:hover,.single_event .popup-content span:focus{color:#000;text-decoration:none}
-.single_event .btn,.single_event #footer .newsletter-wrapper button,#footer .newsletter-wrapper .single_event button,.single_event .newsletter-cta button,.newsletter-cta .single_event button{margin-top:2rem}
+.single_event .Links{margin-top:2.5rem}
 .single_event .btn svg,.single_event #footer .newsletter-wrapper button svg,#footer .newsletter-wrapper .single_event button svg,.single_event .newsletter-cta button svg,.newsletter-cta .single_event button svg{margin-left:.5rem}
 .single_event .btn:hover,.single_event #footer .newsletter-wrapper button:hover,#footer .newsletter-wrapper .single_event button:hover,.single_event .newsletter-cta button:hover,.newsletter-cta .single_event button:hover{background-color:#f90}
 .single_event .btn:hover svg path,.single_event #footer .newsletter-wrapper button:hover svg path,#footer .newsletter-wrapper .single_event button:hover svg path,.single_event .newsletter-cta button:hover svg path,.newsletter-cta .single_event button:hover svg path{fill:black}
 .single_event .show{visibility:visible;opacity:1;-webkit-transform:scale(1);transform:scale(1);-webkit-animation:cssAnimation 0s 3s forwards;animation:cssAnimation 0s 3s forwards;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.single_event #address{white-space:normal !important;width:250px !important;text-align:left !important}
 .newsletter-cta{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;background-image:url("data:image/svg+xml,%3Csvg width='1440' height='1050' viewBox='0 0 1440 1050' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-49 77.4495L1486 0V981.5L-49 1049.82L-49 77.4495Z' fill='%23111112'/%3E%3C/svg%3E%0A");background-size:cover;padding-top:13rem !important}
 .newsletter-cta ::-webkit-input-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1rem;color:rgba(185,185,185,0.5);mix-blend-mode:normal}
 .newsletter-cta ::-moz-placeholder{font-family:Libre Franklin;font-style:normal;font-weight:normal;font-size:1rem;color:rgba(185,185,185,0.5);mix-blend-mode:normal}
@@ -652,6 +656,17 @@ html,html *,body,body *{cursor:none}
 .call-out a:hover{color:white}
 .call-out a:hover svg path{fill:white}
 .call-out p{font-style:normal;font-weight:normal;font-size:1.05rem;line-height:1.5;color:#b9b9b9}
+.thank-you,.subscribed{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:85vh}
+.thank-you .thankYou,.subscribed .thankYou{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin-top:20rem}
+.thank-you .thankYou .tyBelow,.subscribed .thankYou .tyBelow{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex}
+.thank-you .thankYou .tyBelow .btn:hover,.thank-you .thankYou .tyBelow #footer .newsletter-wrapper button:hover,#footer .newsletter-wrapper .thank-you .thankYou .tyBelow button:hover,.thank-you .thankYou .tyBelow .newsletter-cta button:hover,.newsletter-cta .thank-you .thankYou .tyBelow button:hover,.subscribed .thankYou .tyBelow .btn:hover,.subscribed .thankYou .tyBelow #footer .newsletter-wrapper button:hover,#footer .newsletter-wrapper .subscribed .thankYou .tyBelow button:hover,.subscribed .thankYou .tyBelow .newsletter-cta button:hover,.newsletter-cta .subscribed .thankYou .tyBelow button:hover{background-color:#f90}
+.thank-you .thankYou .tyBelow .btn:hover svg path,.thank-you .thankYou .tyBelow #footer .newsletter-wrapper button:hover svg path,#footer .newsletter-wrapper .thank-you .thankYou .tyBelow button:hover svg path,.thank-you .thankYou .tyBelow .newsletter-cta button:hover svg path,.newsletter-cta .thank-you .thankYou .tyBelow button:hover svg path,.subscribed .thankYou .tyBelow .btn:hover svg path,.subscribed .thankYou .tyBelow #footer .newsletter-wrapper button:hover svg path,#footer .newsletter-wrapper .subscribed .thankYou .tyBelow button:hover svg path,.subscribed .thankYou .tyBelow .newsletter-cta button:hover svg path,.newsletter-cta .subscribed .thankYou .tyBelow button:hover svg path{fill:black}
+.thank-you #thankYouBack,.subscribed #thankYouBack{position:absolute;z-index:-1;right:0;border-radius:7px 0 0 7px}
+.thank-you h1,.subscribed h1{line-height:.9;max-width:600px;text-transform:uppercase}
+.thank-you .subtitle,.subscribed .subtitle{font-size:1.25rem;color:#FFF;line-height:1.2;font-weight:400;max-width:650px;font-style:normal !important}
+.thank-you .subtitle span,.subscribed .subtitle span{font-size:1.8rem}
+.thank-you .subtitle p,.subscribed .subtitle p{margin:1rem 0}
+.thank-you .subtitle .sub,.thank-you .subtitle .progress-bar-with-text .form-testimonial .author,.progress-bar-with-text .form-testimonial .thank-you .subtitle .author,.thank-you .subtitle .progress-bar-with-text .form-testimonial a,.progress-bar-with-text .form-testimonial .thank-you .subtitle a,.subscribed .subtitle .sub,.subscribed .subtitle .progress-bar-with-text .form-testimonial .author,.progress-bar-with-text .form-testimonial .subscribed .subtitle .author,.subscribed .subtitle .progress-bar-with-text .form-testimonial a,.progress-bar-with-text .form-testimonial .subscribed .subtitle a{color:white;opacity:.6}
 @media screen{[hidden~="screen"]{display:inherit}
 [hidden~="screen"]:not(:active):not(:focus):not(:target){clip:rect(0 0 0 0) !important;position:absolute !important}
 }@media(min-width:576px){.container{max-width:540px}
@@ -992,8 +1007,12 @@ html,html *,body,body *{cursor:none}
 }@media screen and (max-width:1500px){h3{font-size:1.6rem}
 }@media screen and (max-width:1399px){.three-cards .card p{height:200px}
 }@media screen and (max-width:1200px){.image-text img{width:100%}
+.thank-you #thankYouBack,.subscribed #thankYouBack{width:900px}
 }@media screen and (max-width:1199px){nav#desktop .nav-contact{padding-right:0}
 nav#desktop .nav-contact .line{display:none}
+.single_event .btn,.single_event #footer .newsletter-wrapper button,#footer .newsletter-wrapper .single_event button,.single_event .newsletter-cta button,.newsletter-cta .single_event button{font-size:1rem;height:39px}
+.single_event .backButton ul{width:85%}
+.single_event .backButton ul a{font-size:1rem}
 .newsletter-cta .wpcf7-text{width:100%}
 .newsletter-cta p{margin:1rem 0}
 }@media only screen and (max-width:1199px){.features .feature-cards .fImage{width:85%}
@@ -1049,8 +1068,11 @@ nav#desktop .nav-contact .line{display:none}
 .image-text .text_area .text-left h3{font-size:.85rem}
 .image-text .text_area .text-left h2{padding-top:0;font-size:2.5rem}
 .image-text .text_area .text-right p{margin:0 0 0 2.5rem !important;text-align:left;font-size:.9rem}
-.single_event .btn,.single_event #footer .newsletter-wrapper button,#footer .newsletter-wrapper .single_event button,.single_event .newsletter-cta button,.newsletter-cta .single_event button{margin-top:1rem;margin-bottom:3rem}
+.single_event .Links{margin-top:1rem;margin-bottom:3rem}
 .single_event p{max-width:100%}
+.single_event .backButton ul{width:60%}
+.single_event .backButton li ul{height:65px !important}
+.single_event .backButton ul a{font-size:.9rem}
 .newsletter-cta .fsCurrency.fsCurrencyPrefix{left:-1rem}
 .newsletter-cta p{padding-top:1rem;padding-bottom:0}
 .newsletter-cta .inquireText{padding-bottom:2rem}
@@ -1059,6 +1081,10 @@ nav#desktop .nav-contact .line{display:none}
 .call-out .callOutRight{display:none}
 .call-out .callOutLeft{-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;margin-bottom:2rem}
 .call-out p{font-size:.95rem;line-height:1.6}
+.thank-you #thankYouBack,.subscribed #thankYouBack{width:700px}
+.thank-you h1,.subscribed h1{font-size:4rem;max-width:500px}
+.thank-you .thankYou,.subscribed .thankYou{margin-top:18rem}
+.thank-you .subtitle p,.subscribed .subtitle p{margin:2rem 0}
 }@media only screen and (max-width:991px){.masthead-video-background .video-background{left:30%;bottom:20%}
 .masthead-video-background .masthead-text{margin-top:20%}
 .masthead-video-background .masthead-text .m-title h1{font-size:3.5rem;max-width:500px;margin-bottom:0}
@@ -1111,11 +1137,18 @@ nav#desktop .nav-contact .line{display:none}
 .image-testimonial-overlay{padding-top:5rem}
 .image-testimonial-overlay .quote{padding-right:0;padding-bottom:1rem}
 .image-testimonial-overlay .GiT{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.single_event .backButton ul{width:70%}
 .newsletter-cta .fsCurrency.fsCurrencyPrefix{left:-0.75rem}
 .no-events h4{margin:auto;width:100%;max-width:350px}
 .call-out .callOutMobile{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:start}
 .call-out .callOutMobile h4{font-size:.8rem}
 .call-out .callOutMobile a{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:start;font-size:1.3rem}
+.thank-you #thankYouBack,.subscribed #thankYouBack{width:600px}
+.thank-you h1,.subscribed h1{font-size:3rem;max-width:400px}
+.thank-you .thankYou,.subscribed .thankYou{margin-top:18rem}
+.thank-you .subtitle p,.subscribed .subtitle p{font-size:.9rem}
+.thank-you .btn.solid,.thank-you #footer .newsletter-wrapper button,#footer .newsletter-wrapper .thank-you button,.thank-you .newsletter-cta button,.newsletter-cta .thank-you button,.subscribed .btn.solid,.subscribed #footer .newsletter-wrapper button,#footer .newsletter-wrapper .subscribed button,.subscribed .newsletter-cta button,.newsletter-cta .subscribed button{padding:11px 18px;font-size:1rem}
+.thank-you .btn.solid svg,.thank-you #footer .newsletter-wrapper button svg,#footer .newsletter-wrapper .thank-you button svg,.thank-you .newsletter-cta button svg,.newsletter-cta .thank-you button svg,.subscribed .btn.solid svg,.subscribed #footer .newsletter-wrapper button svg,#footer .newsletter-wrapper .subscribed button svg,.subscribed .newsletter-cta button svg,.newsletter-cta .subscribed button svg{height:20px;width:20px}
 }@media only screen and (max-width:767px){.masthead-video-background .masthead-text{margin-top:25%}
 .masthead-video-background .masthead-text .m-title h1{font-size:2.8rem;max-width:400px}
 .masthead-video-background .masthead-text .subtitle p{font-size:.9rem;padding-top:.5rem;max-width:400px}
@@ -1177,8 +1210,8 @@ h2{font-size:2rem}
 .events .event-date .date-num{font-size:1.1rem}
 .events .event-dets-card{margin-top:7rem}
 .events .event-dets-card h2{font-size:1.4rem;max-width:200px}
-.events .event-dets-card .location{font-size:.9rem;padding-top:.5rem;max-width:400px}
-.events .event-dets-card .time{font-size:.8rem}
+.events .event-dets-card .location{font-size:.6rem;padding-top:.5rem;max-width:400px}
+.events .event-dets-card .time{font-size:.7rem}
 .events .event-title{font-size:.9rem}
 .events p{font-size:.9rem}
 .title-sub{padding:12rem 10% 3rem !important}
@@ -1191,16 +1224,22 @@ h2{font-size:2rem}
 .image-text .text_area .text-right p{margin:0 !important;text-align:left;font-size:.85em}
 .image-testimonial-overlay .quote{font-size:1.3rem}
 .single_event{padding-left:10% !important;padding-right:10% !important}
+.single_event .Links{margin-top:-2rem;margin-bottom:2rem}
+.single_event .backButton ul{width:50%;right:0 !important;top:0 !important;left:auto !important}
+.single_event .backButton li ul{height:57px !important}
+.single_event .backButton ul a{font-size:.8rem !important;padding:4px 10px !important}
+.single_event text{display:none}
 .single_event .firstRow{margin-top:3rem;margin-bottom:3rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .single_event .image{height:225px}
 .single_event .details{padding-top:3rem}
-.single_event h1{font-size:2.5rem}
+.single_event h1{font-size:2.3rem}
 .single_event h6{padding-bottom:1rem;padding-top:1.5rem}
 .single_event h1:after{width:100%}
 .single_event .eventRow{margin-bottom:.5rem;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .single_event .locDets{margin:1rem}
+.single_event .addCal{margin-top:2rem}
 .single_event .btn,.single_event #footer .newsletter-wrapper button,#footer .newsletter-wrapper .single_event button,.single_event .newsletter-cta button,.newsletter-cta .single_event button{margin-top:3rem}
-.single_event .backButton{font-size:.9rem}
+.single_event .backButton{font-size:.8rem}
 .single_event .backButton svg{width:15px;height:15px;margin-bottom:5px}
 .single_event .share{font-size:.9rem}
 .newsletter-cta{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
@@ -1225,9 +1264,17 @@ h2{font-size:2rem}
 .call-out h3{line-height:1.2;font-size:.8rem;margin-left:.6rem}
 .call-out h4{margin-right:0}
 .call-out a{margin-top:.3rem}
+.thank-you,.subscribed{padding-left:10% !important;padding-right:10% !important;height:70vh}
+.thank-you #thankYouBack,.subscribed #thankYouBack{width:600px}
+.thank-you .tyButton,.thank-you .title,.subscribed .tyButton,.subscribed .title{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.thank-you h1,.subscribed h1{font-size:2.7rem;max-width:400px;text-align:center}
+.thank-you .thankYou,.subscribed .thankYou{margin-top:10rem}
+.thank-you .subtitle p,.subscribed .subtitle p{font-size:.8rem;text-align:center;margin:6rem 0 2rem}
+.thank-you .btn.solid,.thank-you #footer .newsletter-wrapper button,#footer .newsletter-wrapper .thank-you button,.thank-you .newsletter-cta button,.newsletter-cta .thank-you button,.subscribed .btn.solid,.subscribed #footer .newsletter-wrapper button,#footer .newsletter-wrapper .subscribed button,.subscribed .newsletter-cta button,.newsletter-cta .subscribed button{padding:11px 18px;font-size:1rem}
+.thank-you .btn.solid svg,.thank-you #footer .newsletter-wrapper button svg,#footer .newsletter-wrapper .thank-you button svg,.thank-you .newsletter-cta button svg,.newsletter-cta .thank-you button svg,.subscribed .btn.solid svg,.subscribed #footer .newsletter-wrapper button svg,#footer .newsletter-wrapper .subscribed button svg,.subscribed .newsletter-cta button svg,.newsletter-cta .subscribed button svg{height:20px;width:20px}
 }@media only screen and (max-width:575px){.masthead-video-background{padding-left:10% !important;padding-right:10% !important}
 .masthead-video-background .video-background{border-radius:7px 0 0 7px;margin-top:0;bottom:35%;left:20%}
-.masthead-video-background .video-background #myVideo{top:30%;left:60%}
+.masthead-video-background .video-background #myVideo{top:40%;max-height:100%}
 .masthead-video-background .masthead-text{margin-top:110%}
 .masthead-video-background .masthead-text .m-title h1{font-size:2.5rem;max-width:400px}
 .masthead-video-background .masthead-text .subtitle{padding-left:3.5rem;padding-top:1rem}
@@ -1245,6 +1292,8 @@ h2{font-size:2rem}
 .features .feature-cards .content h3{font-size:2.3rem}
 .features .feature-cards .content .btn svg,.features .feature-cards .content #footer .newsletter-wrapper button svg,#footer .newsletter-wrapper .features .feature-cards .content button svg,.features .feature-cards .content .newsletter-cta button svg,.newsletter-cta .features .feature-cards .content button svg{height:28px;width:28px;margin-left:.2rem}
 }@media screen and (max-width:480px){.newsletter-cta .fsCurrency.fsCurrencyPrefix{left:-1rem}
+}@media screen and (max-width:340px){.thank-you,.subscribed{height:100vh}
+.thank-you h1,.subscribed h1{font-size:2.3rem}
 }@media print{.d-print-none{display:none !important}
 .d-print-inline{display:inline !important}
 .d-print-inline-block{display:inline-block !important}

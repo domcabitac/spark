@@ -21,7 +21,7 @@ get_header(); ?>
             <div class="col-3 col-xl-6 col-lg-6 col-md-6 justify-content-end align-self-end text-right">
                 <a class='share' onclick='getURL();'  id='popup-btn' onclick='copyUrl();'>
                     <svg width="18" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.923 13.755c-.632 0-1.206.229-1.722.573L5.682 10.03c0-.115.057-.23.057-.287 0-.057 0-.23-.057-.287l7.519-4.297c.46.344 1.09.572 1.722.572a2.84 2.84 0 002.87-2.865A2.84 2.84 0 0014.923 0a2.84 2.84 0 00-2.87 2.866c0 .115 0 .172.057.287L4.592 7.452a2.823 2.823 0 00-1.722-.573A2.84 2.84 0 000 9.745a2.84 2.84 0 002.87 2.866c.632 0 1.205-.23 1.722-.573l7.519 4.298c0 .115-.057.172-.057.287a2.84 2.84 0 002.87 2.866 2.84 2.84 0 002.87-2.866 2.843 2.843 0 00-2.871-2.868z" fill="#F90"/></svg>
-                    Share
+                    <text>Share<text>
                 </a>
             </div>
             <div id="popup-wrapper" class="popup-container hide-me">
@@ -70,7 +70,7 @@ Link Copied</p>
                     <div class="col-12 col-xl-8 col-lg-8 col-md-8 locDets">
                         <form action="http://maps.google.com/maps" method="get" target="_blank">
                             <input type="hidden" name="daddr" value='<?php the_field( 'location' ); ?>' />
-                            <input type="submit" class='locationText' value='<?php the_field( 'location' ); ?>' />
+                            <input id='address' type="submit" class='locationText' value='<?php the_field( 'location' ); ?>' />
                         </form>
                     </div>
                 </div>
@@ -83,27 +83,53 @@ Link Copied</p>
                         </div>
                     </div>
                     <div class="col-12 col-xl-8 col-lg-8 col-md-8 locDets">
-                        <?php echo get_the_date( get_option('date_format') ); ?>
+                        <?php $date = strtotime(get_field('date')); ?>
+                        <?php echo date('M d, 20y', $date); ?>
                         <br/>
-                        <?php the_time('g:ia');?>
+                        <?php echo date('g:i a', $date); ?>
                     </div>
                 </div>
-                <a class='btn solid'href="<?php the_field( 'ticket_link' ); ?>">Get my ticket
-                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.93944 21.9405L18.6947 6.18521L18.8806 15.9814L22.0715 16.0422L21.7792 0.778222L6.51518 0.485891L6.57606 3.67686L16.3722 3.86268L0.616912 19.618L2.93944 21.9405Z" fill="#FF9900"/>
-                    </svg>
-                </a>
-                <?php 
-                    $datetime = new DateTime(get_field( 'date' ));
-                    // $startDate = format(DateTime::ATOM);
-                    echo $datetime->format(DateTime::ATOM);
-                    $endDate = urlencode(get_field( 'end_date' ));
-                    $location = urlencode(get_field( 'location' ));
-                    $desc = urlencode(get_field( 'description' ));
-                ?>
-                <a href="http://www.google.com/calendar/render?action=TEMPLATE&text=[<?php the_title(); ?>]&dates=[<?php echo $datetime->format(DateTime::ATOM); ?>]/[<?php echo $endDate; ?>]&details=[<?php echo $desc ?>]&location=[<?php echo $location; ?>]&trp=false&sprop=&sprop=name:"target="_blank" rel="nofollow">
-                    Add to my calendar
-                </a>
+                <div class="row justify-content-center align-items-center Links">
+                    <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <a class='btn solid'href="<?php the_field( 'ticket_link' ); ?>">Get my ticket
+                            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.93944 21.9405L18.6947 6.18521L18.8806 15.9814L22.0715 16.0422L21.7792 0.778222L6.51518 0.485891L6.57606 3.67686L16.3722 3.86268L0.616912 19.618L2.93944 21.9405Z" fill="#FF9900"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 addCal">
+                        <?php  
+                            $location = urlencode(get_field( 'location' ));
+                            $desc = urlencode(get_field( 'description' ));                       
+                            $datetime = new DateTime(get_field( 'date' ));
+                            $endDate = new DateTime(get_field( 'end_date' ));
+                            $result = $datetime->format("Y-m-d\THis");
+                            $krr    = explode('-', $result);
+                            $result = implode("", $krr);
+
+                            $resultV2 = $endDate->format("Y-m-d\THis");
+                            $krrV2    = explode('-', $resultV2);
+                            $resultV2 = implode("", $krrV2);
+                        ?>
+                        <?php $calendar_file = get_field( 'calendar_file' ); ?>
+                        <?php if ($calendar_file ) : ?>
+
+                        <ul class="backButton">
+                            <li>
+                                <a>Add to Calendar</a>
+                                <ul>
+                                <li><a class='backButton' href="https://calendar.google.com/calendar/u/0/r/eventedit?text=<?php the_title(); ?>&dates=<?php echo $result; ?>/<?php echo $resultV2; ?>&details=<?php echo $desc ?>&location=<?php echo $location; ?>&trp=false&sprop=&sprop=name:"target="_blank" rel="nofollow">Google Calendar</a> </li>
+                                <li><a href="<?php echo esc_url( $calendar_file['url'] ); ?>">Other Calendar</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <?php else: ?>
+                            <a class='backButton' href="https://calendar.google.com/calendar/u/0/r/eventedit?text=<?php the_title(); ?>&dates=<?php echo $result; ?>/<?php echo $resultV2; ?>&details=<?php echo $desc ?>&location=<?php echo $location; ?>&trp=false&sprop=&sprop=name:"target="_blank" rel="nofollow">Add to Calendar</a> 
+                            <?php endif; ?>
+
+                        </div>
+                </div>
+
             </div>
             <div class="col-xl-6 col-lg-6 col-12">
                 <h6>

@@ -62,7 +62,7 @@ get_header(); ?>
                 while ( $loop->have_posts() ) : $loop->the_post(); 
             ?>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex">
-            <a href="<?php the_permalink();?>" class="post-type-slide" style="background-image: url(<?php the_post_thumbnail_url('large');?>);">
+            <a href="<?php the_permalink();?>" class="post-type-slide" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),url(<?php the_post_thumbnail_url('large');?>);">
                 <div class="topCard">
                     <div class="container">
                         <div class="row align-items-center">

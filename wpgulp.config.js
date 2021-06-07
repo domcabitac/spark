@@ -12,7 +12,7 @@
 // Local project URL of your already running WordPress site.
 // > Could be something like "wpgulp.local" or "localhost"
 // > depending upon your local WordPress setup.
-const projectURL = 'wpgulp.local';
+const projectURL = 'spark.local';
 
 // Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
 const productURL = './';
@@ -86,26 +86,26 @@ const zipIncludeGlob = ['./**/*']; // Default: Include all files/folders in curr
 
 // Default ignored files and folders for the zip file.
 const zipIgnoreGlob = [
-	'!./{node_modules,node_modules/**/*}',
-	'!./.git',
-	'!./.svn',
-	'!./gulpfile.babel.js',
-	'!./wpgulp.config.js',
-	'!./.eslintrc.js',
-	'!./.eslintignore',
-	'!./.editorconfig',
-	'!./phpcs.xml.dist',
-	'!./vscode',
-	'!./package.json',
-	'!./package-lock.json',
-	'!./assets/css/**/*',
-	'!./assets/css',
-	'!./assets/img/raw/**/*',
-	'!./assets/img/raw',
-	`!${imgSRC}`,
-	`!${styleSRC}`,
-	`!${jsCustomSRC}`,
-	`!${jsVendorSRC}`
+    '!./{node_modules,node_modules/**/*}',
+    '!./.git',
+    '!./.svn',
+    '!./gulpfile.babel.js',
+    '!./wpgulp.config.js',
+    '!./.eslintrc.js',
+    '!./.eslintignore',
+    '!./.editorconfig',
+    '!./phpcs.xml.dist',
+    '!./vscode',
+    '!./package.json',
+    '!./package-lock.json',
+    '!./assets/css/**/*',
+    '!./assets/css',
+    '!./assets/img/raw/**/*',
+    '!./assets/img/raw',
+    `!${imgSRC}`,
+    `!${styleSRC}`,
+    `!${jsCustomSRC}`,
+    `!${jsVendorSRC}`
 ];
 
 // >>>>> Translation options.
@@ -136,37 +136,37 @@ const BROWSERS_LIST = ['last 2 version', '> 1%'];
 
 // Export.
 module.exports = {
-	projectURL,
-	productURL,
-	browserAutoOpen,
-	injectChanges,
-	styleSRC,
-	styleDestination,
-	outputStyle,
-	errLogToConsole,
-	precision,
-	jsVendorSRC,
-	jsVendorDestination,
-	jsVendorFile,
-	jsCustomSRC,
-	jsCustomDestination,
-	jsCustomFile,
-	imgSRC,
-	imgDST,
-	watchStyles,
-	watchJsVendor,
-	watchJsCustom,
-	watchPhp,
-	zipName,
-	zipDestination,
-	zipIncludeGlob,
-	zipIgnoreGlob,
-	textDomain,
-	translationFile,
-	translationDestination,
-	packageName,
-	bugReport,
-	lastTranslator,
-	team,
-	BROWSERS_LIST
+    projectURL,
+    productURL,
+    browserAutoOpen,
+    injectChanges,
+    styleSRC,
+    styleDestination,
+    outputStyle,
+    errLogToConsole,
+    precision,
+    jsVendorSRC,
+    jsVendorDestination,
+    jsVendorFile,
+    jsCustomSRC,
+    jsCustomDestination,
+    jsCustomFile,
+    imgSRC,
+    imgDST,
+    watchStyles,
+    watchJsVendor,
+    watchJsCustom,
+    watchPhp,
+    zipName,
+    zipDestination,
+    zipIncludeGlob,
+    zipIgnoreGlob,
+    textDomain,
+    translationFile,
+    translationDestination,
+    packageName,
+    bugReport,
+    lastTranslator,
+    team,
+    BROWSERS_LIST
 };

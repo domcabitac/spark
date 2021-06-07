@@ -305,8 +305,8 @@
                 bottom: 35%;
                 left: 20%;
                 #myVideo {
-                    top: 30%;
-                    left: 60%;
+                    top: 40%;
+                    max-height: 100%;
                 }
             }
             .masthead-text {
@@ -1307,12 +1307,12 @@
                     max-width: 200px;
                 }
                 .location {
-                    font-size: 0.9rem;
+                    font-size: 0.6rem;
                     padding-top: 0.5rem;
                     max-width: 400px;
                 }
                 .time {
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                 }
             }
             .event-title {
@@ -1673,8 +1673,37 @@
             /* identical to box height, or 18px */
             text-transform: uppercase;
             color: #B9B9B9;
+            list-style-type: none;
         }
-        .backButton:hover {
+        // .backButton>li>a {
+        //     display: block;
+        //     padding: 10px 20px;
+        //     text-align: center;
+        //     text-decoration: none;
+        // }
+        .backButton ul {
+            background: white;
+            height: 0;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            transition: all .5s ease;
+            top: 35px;
+            width: 70%;
+            list-style-type: none;
+        }
+        .backButton li:hover ul {
+            height: 70px;
+            opacity: 1;
+            transform: translateY(0);
+            border-radius: 7px;
+        }
+        .backButton ul a {
+            color: #000;
+            display: block;
+            padding: 5px 20px;
+        }
+        .backButton ul a:hover {
             color: $or;
         }
         .share {
@@ -1738,8 +1767,10 @@
             color: #000;
             text-decoration: none;
         }
+        .Links {
+            margin-top: 2.5rem;
+        }
         .btn {
-            margin-top: 2rem;
             svg {
                 margin-left: 0.5rem;
             }
@@ -1757,24 +1788,75 @@
             animation: cssAnimation 0s 3s forwards;
             transition: all 0.3s ease-in-out;
         }
+        #address {
+            white-space: normal !important;
+            width: 250px !important;
+            text-align: left !important;
+        }
         @keyframes cssAnimation {
             to {
                 transition: all 0.3s ease-in;
                 opacity: 0;
             }
         }
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: 1199px) {
             .btn {
+                font-size: 1rem;
+                height: 39px;
+            }
+            .backButton ul {
+                width: 85%;
+            }
+            .backButton ul a {
+                font-size: 1rem;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            .Links {
                 margin-top: 1rem;
                 margin-bottom: 3rem;
             }
             p {
                 max-width: 100%;
             }
+            .backButton ul {
+                width: 60%;
+            }
+            .backButton li ul {
+                height: 65px !important;
+            }
+            .backButton ul a {
+                font-size: 0.9rem;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .backButton ul {
+                width: 70%;
+            }
         }
         @media screen and (max-width: 575px) {
             padding-left: 10% !important;
             padding-right: 10% !important;
+            .Links {
+                margin-top: -2rem;
+                margin-bottom: 2rem;
+            }
+            .backButton ul {
+                width: 50%;
+                right: 0 !important;
+                top: 0 !important;
+                left: auto !important;
+            }
+            .backButton li ul {
+                height: 57px !important;
+            }
+            .backButton ul a {
+                font-size: 0.8rem !important;
+                padding: 4px 10px !important;
+            }
+            text {
+                display: none;
+            }
             .firstRow {
                 margin-top: 3rem;
                 margin-bottom: 3rem;
@@ -1789,7 +1871,7 @@
                 padding-top: 3rem;
             }
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
             h6 {
                 padding-bottom: 1rem;
@@ -1805,11 +1887,14 @@
             .locDets {
                 margin: 1rem;
             }
+            .addCal {
+                margin-top: 2rem;
+            }
             .btn {
                 margin-top: 3rem;
             }
             .backButton {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                 /* identical to box height, or 18px */
                 svg {
                     width: 15px;
@@ -1860,7 +1945,7 @@
             font-weight: normal;
             font-size: 1rem;
             /* identical to box height, or 86% */
-            color: rgba(#B9B9B9,0.5);
+            color: rgba(#B9B9B9, 0.5);
             mix-blend-mode: normal;
         }
         .fsRowBody input[type=checkbox]:before,
@@ -1878,7 +1963,6 @@
             border: none !important;
             background-color: white !important;
         }
-
         // input[type=email] {
         //     padding: 1rem;
         //     height: 60px;
@@ -2141,7 +2225,7 @@
         .fsBody .fsForm {
             margin: 0 !important;
             padding: 0 !important;
-            background-color:transparent;
+            background-color: transparent;
         }
         .fsRowBody input[type=email],
         .fsRowBody input[type=number],
@@ -2169,48 +2253,55 @@
             border-radius: 0 !important;
             background-color: rgba(17, 17, 18, 1) !important;
             box-shadow: none;
-            font-size:1rem;
+            font-size: 1rem;
         }
-        .fsBody .fsLabel, .fsBody label{
-            color:#FFF !important;
+        .fsBody .fsLabel,
+        .fsBody label {
+            color: #FFF !important;
         }
         .fsSectionHeader {
             display: none !important;
         }
-        div.fsError{
-            background-color:rgba(206, 95, 109,0.15);
-            padding:1rem;
-            border:none !important;
+        div.fsError {
+            background-color: rgba(206, 95, 109, 0.15);
+            padding: 1rem;
+            border: none !important;
         }
-        .fsValidationError{
-            background-color:transparent;
-            box-shadow:none;
+        .fsValidationError {
+            background-color: transparent;
+            box-shadow: none;
         }
-        label.fsOptionLabel{
-            background-color:transparent !important;
-            border:none !important;
+        label.fsOptionLabel {
+            background-color: transparent !important;
+            border: none !important;
         }
-        .fsCurrency.fsCurrencyPrefix{
+        .fsCurrency.fsCurrencyPrefix {
             position: absolute;
             left: -1.5rem;
             bottom: 1.35rem;
-            @media screen and (max-width:991px){
-                left:-1rem;
+            @media screen and (max-width: 991px) {
+                left: -1rem;
             }
-            @media screen and (max-width:767px){
-                left:-0.75rem;
+            @media screen and (max-width:767px) {
+                left: -0.75rem;
             }
-            @media screen and (max-width:480px){
-                left:-1rem;
+            @media screen and (max-width:480px) {
+                left: -1rem;
             }
         }
-        .fsBody .fsRowBody{
-            position:relative;
+        .fsBody .fsRowBody {
+            position: relative;
         }
-        .fsValidationError .fsSignature, .fsValidationError input[type=email], .fsValidationError input[type=number], .fsValidationError input[type=tel], .fsValidationError input[type=text], .fsValidationError select, .fsValidationError textarea{
-            border:none !important;
-            border-color:transparent;
-            border-bottom:1px solid #ce5f6d !important;
+        .fsValidationError .fsSignature,
+        .fsValidationError input[type=email],
+        .fsValidationError input[type=number],
+        .fsValidationError input[type=tel],
+        .fsValidationError input[type=text],
+        .fsValidationError select,
+        .fsValidationError textarea {
+            border: none !important;
+            border-color: transparent;
+            border-bottom: 1px solid #ce5f6d !important;
         }
         @media screen and (max-width: 991px) {
             p {
@@ -2552,6 +2643,147 @@
             }
             a {
                 margin-top: 0.3rem;
+            }
+        }
+    }
+
+    .thank-you,
+    .subscribed{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 85vh;
+        .thankYou{
+            display: flex;
+            justify-content: flex-start;
+            align-items: start;
+            flex-direction: column;
+            margin-top: 20rem;
+            .tyBelow{
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                .btn:hover {
+                    background-color: $or;
+                    svg path {
+                        fill: black;
+                    }
+                }
+            }
+        }
+        #thankYouBack{
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            border-radius: 7px 0px 0px 7px;
+        }
+        h1{
+            line-height: 0.9;
+            max-width: 600px;
+            text-transform: uppercase;
+        }
+        .subtitle{
+            span{
+                font-size: 1.8rem;
+            }
+            p{
+                margin: 1rem 0;
+            }
+            font-size: 1.25rem;
+            color: #FFF;
+            line-height: 1.2;
+            font-weight: 400;
+            max-width: 650px;
+            font-style: normal !important;
+            .sub{
+                color: white;
+                opacity: 0.6;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            #thankYouBack{
+                width: 900px;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            #thankYouBack{
+                width: 700px;
+            }
+            h1{
+                font-size: 4rem;
+                max-width: 500px;
+            }
+            .thankYou{
+                margin-top: 18rem;
+            }
+            .subtitle p{
+                margin: 2rem 0;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            #thankYouBack{
+                width: 600px;
+            }
+            h1{
+                font-size: 3rem;
+                max-width: 400px;
+            }
+            .thankYou{
+                margin-top: 18rem;
+            }
+            .subtitle p{
+                font-size: 0.9rem;
+            }
+            .btn.solid{
+                padding: 11px 18px;
+                font-size: 1rem;
+                svg{
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+        @media screen and (max-width: 575px) {
+            padding-left: 10% !important;
+            padding-right: 10% !important;
+            height: 70vh;
+            #thankYouBack{
+                width: 600px;
+            }
+            .tyButton,
+            .title{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                font-size: 2.7rem;
+                max-width: 400px;
+                text-align: center;
+            }
+            .thankYou{
+                margin-top: 10rem;
+            }
+            .subtitle p{
+                font-size: 0.8rem;
+                text-align: center;
+                margin: 6rem 0 2rem;
+            }
+            
+            .btn.solid{
+                padding: 11px 18px;
+                font-size: 1rem;
+                svg{
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+        @media screen and (max-width: 340px) {
+            height: 100vh;
+            h1{
+                font-size: 2.3rem;
             }
         }
     }
